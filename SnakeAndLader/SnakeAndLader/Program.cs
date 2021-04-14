@@ -47,12 +47,35 @@ namespace SnakeAndLader
 			return position;
 		}
 
+
 		static void Main(string[] args)
 		{
 			Console.WriteLine("**********Welcome to Snake And Ladder Game**************");
 			int positionOfPlayer_1 = 0;
 			int positionOfPlayer_2 = 0;
-			int diceRollTotal = 0;
+
+			while (positionOfPlayer_1 < 100 && positionOfPlayer_2 < 100)
+			{
+				if (playerTurn)
+				{
+					positionOfPlayer_1 = dieRollForPlay(positionOfPlayer_1, " Player1 ");
+				}
+				else
+				{
+					positionOfPlayer_2 = dieRollForPlay(positionOfPlayer_2, " Player2 ");
+				}
+				playerTurn = !playerTurn;
+			}
+			if (positionOfPlayer_1 == 100)
+			{
+				Console.WriteLine("Player 1 wins!! ");
+
+			}
+			else
+			{
+				Console.WriteLine("Player 2 wins!! ");
+
+			}
 		}
 	}
 }
