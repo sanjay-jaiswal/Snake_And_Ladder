@@ -14,7 +14,7 @@ namespace SnakeAndLader
 			const int NO_PLAY = 0;
 			const int LADDER = 1;
 			const int SNAKE = 2;
-
+			//
 			Random random = new Random();
 			int diceNumber = random.Next(1, 7);
 			int playOption = random.Next(0, 3);
@@ -46,7 +46,6 @@ namespace SnakeAndLader
 			Console.WriteLine("Position of " + Player + "  " + position);
 			return position;
 		}
-
 
 		static void Main(string[] args)
 		{
